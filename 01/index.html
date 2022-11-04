@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>fetch</title>
+</head>
+
+<body>
+    <main>
+        <div class="options">
+            <button onclick="get()">GET</button>
+            <button onclick="getId()">GET by Id</button>
+            <button onclick="getPosts()">GET Posts</button>
+            <button onclick="deleteFunction()">DELETE</button>
+        </div>
+        <h1 id="title">Postagens</h1>
+        <input id="numero" type="number" min="1" max="100" value="1">
+        <div class="get"></div>
+        <div class="get-id"></div>
+        <div class="get-posts">
+            <form class="form" onsubmit="getReqPost(event)">
+                <label class="add_label">userId:</label>
+                <input type="number" class="add_input" id="new_userId" name="new_userId">
+                <br>
+                <label class="add_label">title:</label>
+                <input type="text" class="add_input" id="new_title" name="new_title">
+                <br>
+                <label class="add_label">body:</label>
+                <input type="text" class="add_input" id="new_body" name="new_body">
+            </form>
+        </div>
+        <div class="delete"></div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
